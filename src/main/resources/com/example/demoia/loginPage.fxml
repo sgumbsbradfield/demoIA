@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER"
+      minHeight="600.0" minWidth="400.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demoia.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Please login below..."/>
+    <TextField fx:id="inpUsername" promptText="Username"/>
+    <!-- StackPane to stack PasswordField and TextField on top of each other -->
+    <StackPane>
+        <!-- Initially show the PasswordField -->
+        <PasswordField fx:id="passwordField" promptText="Enter your password"/>
+
+        <!-- Hidden TextField to show the password in plain text -->
+        <TextField fx:id="passwordTextField" promptText="Password" visible="false"/>
+    </StackPane>
+
+    <!-- CheckBox to toggle password visibility -->
+    <CheckBox fx:id="showPasswordCheckBox" text="Show Password" onAction="#togglePasswordVisibility"/>
+
+    <Button fx:id="btnGoToTimetable" onAction="#goToTimetable" text="TIMETABLE" />
+    <Button fx:id="btnGoToMap" onAction="#goToMap" text="MAP" />
+    <Button fx:id="btnGoToBooking" onAction="#goToBooking" text="BOOKING" />
+
+</VBox>

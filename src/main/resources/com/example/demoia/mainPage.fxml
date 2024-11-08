@@ -15,7 +15,6 @@
             <Button fx:id="btnGoToLogin" onAction="#goToLogin" text="LOGIN" />
 
 
-
         <!-- ImageView to display an image -->
         <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="200.0" preserveRatio="true">
             <!-- Image loaded from resources -->

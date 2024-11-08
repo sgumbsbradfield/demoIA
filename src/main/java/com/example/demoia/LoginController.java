@@ -27,6 +27,13 @@ public class LoginController {
     @FXML
     private CheckBox showPasswordCheckBox;
 
+    public void goTo(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("timetablePage.fxml"));
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("TIMETABLE...");
+        stage.setScene(new Scene(root, 600, 400));
+    }
+
     public void goToTimetable(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("timetablePage.fxml"));
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
@@ -44,7 +51,6 @@ public class LoginController {
     public void goToBooking(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("bookingPage.fxml"));
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-
         stage.setTitle("BOOKING...");
         stage.setScene(new Scene(root, 600, 400));
     }

@@ -27,8 +27,8 @@
     <!-- CheckBox to toggle password visibility -->
     <CheckBox fx:id="showPasswordCheckBox" text="Show Password" onAction="#togglePasswordVisibility"/>
 
-    <Button fx:id="btnGoToTimetable" onAction="#goToTimetable" text="TIMETABLE" />
-    <Button fx:id="btnGoToMap" onAction="#goToMap" text="MAP" />
-    <Button fx:id="btnGoToBooking" onAction="#goToBooking" text="BOOKING" />
+    <Button fx:id="btnGoToTimetable" onAction="#goTo" text="TIMETABLE" />
+    <Button fx:id="btnGoToMap" onAction="#goTo" text="MAP" />
+    <Button fx:id="btnGoToBooking" onAction="#goTo" text="BOOKING" />
 
 </VBox>

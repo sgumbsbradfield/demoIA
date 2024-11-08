@@ -28,10 +28,15 @@ public class LoginController {
     private CheckBox showPasswordCheckBox;
 
     public void goTo(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("timetablePage.fxml"));
+        Button source = (Button) event.getSource();
+        String pageName = source.getText().toLowerCase();
+        String fxmlPage = pageName + "Page.fxml";
+
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlPage));
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("TIMETABLE...");
+        stage.setTitle(pageName.toUpperCase()+"...");
         stage.setScene(new Scene(root, 600, 400));
+
     }
 
     public void goToTimetable(ActionEvent event) throws IOException {

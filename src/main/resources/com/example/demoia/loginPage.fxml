@@ -14,7 +14,7 @@
     </padding>
 
     <Label fx:id="welcomeText" text="Please login below..."/>
-    <TextField fx:id="inpUsername" promptText="Username"/>
+    <TextField fx:id="usernameField" promptText="Username"/>
     <!-- StackPane to stack PasswordField and TextField on top of each other -->
     <StackPane>
         <!-- Initially show the PasswordField -->
@@ -26,6 +26,8 @@
 
     <!-- CheckBox to toggle password visibility -->
     <CheckBox fx:id="showPasswordCheckBox" text="Show Password" onAction="#togglePasswordVisibility"/>
+
+    <Button fx:id="btnLogin" onAction="#login" text="LOGIN" />
 
     <Button fx:id="btnGoToTimetable" onAction="#goTo" text="TIMETABLE" />
     <Button fx:id="btnGoToMap" onAction="#goTo" text="MAP" />
